@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title>
+            Dual Listbox
+        </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+
+            <div class="row">
+                <h1>Dual Listbox</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <button type="button" class="btn btn-primary col-md-12" onclick="moveToSelect('unselected')">Move <span
+                            class="glyphicon glyphicon-menu-right"></span></button>
+                </div>
+                <div class="col-md-3">
+                    <button type="button" class="btn btn-primary col-md-12" onclick="moveToSelect('unselected',true)">Move
+                        All<span class="glyphicon glyphicon-menu-right"></span><span
+                            class="glyphicon glyphicon-menu-right"></span></button>
+                </div>
+                <div class="col-md-3">
+                    <button type="button" class="btn btn-primary col-md-12" onclick="moveToSelect('selected')"> <span
+                            class="glyphicon glyphicon-menu-left"></span>Move</button>
+                </div>
+                <div class="col-md-3">
+                    <button type="button" class="btn btn-primary col-md-12" onclick="moveToSelect('selected',true)"><span
+                            class="glyphicon glyphicon-menu-left"></span><span class="glyphicon glyphicon-menu-left"></span>
+                        Move All</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Unselected Columns</h3>
+                </div>
+                <div class="col-md-6">
+                    <h3>Selected Columns</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <select multiple="multiple" size="20" class="form-control" id="custom-columns-unselected"
+                            style=" height:300px">
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <select multiple="multiple" size="20" class="form-control" id="custom-columns-selected"
+                            style=" height:300px">
+                            <option value="title_name">Title</option>
+                            <option value="initials">Initials</option>
+                            <option value="surname">Surname</option>
+                            <option value="name">Name</option>
+                            <option value="sign_in">Sign-In</option>
+                            <option value="time_in">Time-In</option>
+                            <option value="sign_out">Sign-Out</option>
+                            <option value="time_out">Time-Out</option>
+                            <option value="revenue">Revenue</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="custom-field" name="custom-field"
+                            placeholder="Custom field">
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-primary" onclick="addCustomField()">Add</button>
+                </div>
+
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-primary" onclick="moveSelection('up')">Move
+                        up</button>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-primary" onclick="moveSelection('down')">Move
+                        down</button>
+                </div>
+            </div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
