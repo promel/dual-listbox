@@ -1,2 +1,2 @@
-# duallist-box
+# dual-listbox
 duallist box
